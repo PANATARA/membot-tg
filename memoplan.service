@@ -1,0 +1,15 @@
+[Unit]
+Description=MemoPlan Telegram Bot (Spaced Repetition System)
+After=network.target
+
+[Service]
+Type=simple
+User=andrey
+WorkingDirectory=/home/andrey/Projects/memoplan
+ExecStart=/home/andrey/Projects/memoplan/.venv/bin/python main.py
+Restart=always
+RestartSec=10
+EnvironmentFile=/home/andrey/Projects/memoplan/.env
+
+[Install]
+WantedBy=default.target
